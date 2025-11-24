@@ -46,8 +46,9 @@ nav
     height: 15vmin;
     z-index: 1000;
     color: lightgrey;
-    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.1));
-    backdrop-filter: blur(3px) saturate(180%);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
     letter-spacing: 1px;
     font-family:'poppins';
 }
@@ -142,7 +143,9 @@ section
 #home a
 {
     text-decoration: none;
-    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.1));
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 2vmin 4vmin;
     color:white;
     border-radius: 1.5vmin;
@@ -435,6 +438,14 @@ section
     .project-container
     {
         flex-direction: column;
+    }
+    section {
+        justify-content: center;
+        padding-top: 0;
+    }
+    nav
+    {
+        height: 8vmin;
     }
 
 }
