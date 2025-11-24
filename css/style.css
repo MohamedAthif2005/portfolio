@@ -372,6 +372,7 @@ section
     nav
     {
         padding: 30px 30px;
+        height: 2vmin;
     }
     nav h2
     {
@@ -442,10 +443,6 @@ section
     section {
         justify-content: center;
         padding-top: 0;
-    }
-    nav
-    {
-        height: 8vmin;
     }
     .project-card h2
     {
