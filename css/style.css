@@ -16,7 +16,7 @@ html,body
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    overflow:hidden;
+    overflow:clip;
 }
 @font-face
 {
@@ -199,10 +199,6 @@ section
 {
     font-family:"poppins";
     text-align: center;
-    height: 100vh;
-    overflow-y: auto;        /* enable vertical scroll */
-    overscroll-behavior: contain; /* prevent scroll chaining to body */
-    padding: 5vmin 0;
 }
 .project-title
 {
@@ -212,8 +208,6 @@ section
 .project-container
 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 5vmin;
 }
 .project-card
@@ -337,6 +331,30 @@ section
     backdrop-filter: blur(6px);
     transition: 0.3s ease;
 }
+
+
+.back-btn {
+    text-decoration: none;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 2vmin 4vmin;
+    color: white;
+    border-radius: 1.5vmin;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: pulse 2.5s infinite ease-in-out;
+    display: inline-block;
+    margin-bottom: 4vmin;
+}
+
+.back-btn:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: translateY(-0.5vmin) scale(1.05);
+}
+
+.back-btn:active {
+    transform: scale(0.95);
+}
 @keyframes fadein
 {
     from { opacity: 0; }
@@ -451,9 +469,49 @@ section
         background: rgba(255,255,255,0.2);
         border: 0.5vmin solid whitesmoke;
     }
-    #project
-    {
+    .main-section {
         padding-top: 10vmin;
     }
+    
+    #projects {
+        height: auto;
+        min-height: 100vh;
+        padding: 15vmin 4vmin 8vmin;
+        overflow-y: auto;
+    }
+    
+    .project-title {
+        font-size: 6vmin;
+        margin-bottom: 5vmin;
+    }
+    
+    .project-card {
+        width: 85vw;
+        height: auto;
+        min-height: 30vmin;
+        padding: 5vmin;
+    }
+    
+    .project-card h3 {
+        font-size: 4vmin;
+    }
+    
+    .project-card p {
+        font-size: 3vmin;
+        line-height: 4.5vmin;
+    }
+    
+    .project-container {
+        flex-direction: column;
+        gap: 5vmin;
+        align-items: center;
+    }
+    
+    .back-btn {
+        font-size: 3.5vmin;
+        padding: 3vmin 6vmin;
+        margin-bottom: 6vmin;
+    }
+    
 
 }
