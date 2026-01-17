@@ -452,10 +452,6 @@ section
         margin-left: 5vmin;
         margin-right: 5vmin;
     }
-    .project-container
-    {
-        flex-direction: column;
-    }
     section {
         justify-content: center;
         padding-top: 0;
